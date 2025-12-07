@@ -3,6 +3,7 @@
 require 'thor'
 require_relative 'cli/version'
 require_relative 'cli/plugin'
+require_relative 'cli/use'
 
 module Psdk
   module Cli
@@ -28,6 +29,9 @@ module Psdk
 
       desc 'plugin', 'manage PSDK plugins'
       subcommand 'plugin', Plugin
+
+      desc 'use', 'manage project\'s PSDK version'
+      subcommand 'use', Use
     end
   end
 end
